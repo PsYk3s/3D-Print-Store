@@ -1,0 +1,50 @@
+body {
+    max-width: 1200px;
+    margin: auto;
+    padding: 30px 20px;
+    background: linear-gradient(169deg, #ff2857, #218de3);
+    background-attachment: fixed;
+    font-family: "Source Code Pro", monospace;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-bottom: 5px solid #39009f45;
+    padding-bottom: 20px;
+}
+
+nav > a {
+    color: white;
+    font-weight: bold;
+    padding: 6px;
+    text-decoration: none;
+}
+
+nav > a.active {
+    border-bottom: 5px solid #39009f8f;
+}
+
+h2 {
+    color: #ffbc00;
+    font-size: 20px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.product-card {
+    padding: 5px;
+    background: #f3f3f3;
+    text-align: center;
+}
+
+img.product-img {
+    display: block;
+    background: white;
+    aspect-ratio: 1;
+}

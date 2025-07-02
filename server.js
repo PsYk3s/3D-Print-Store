@@ -2,19 +2,15 @@ const express = require('express');
 const path = require('path');
 const app = express();
 
-// Set EJS as the templating engine
+// Set EJS
 app.set('view engine', 'ejs');
-
-// Set views directory (optional if using default 'views')
 app.set('views', path.join(__dirname, 'views'));
 
-// Serve static files from 'public' folder
+// Static files
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Sample route
-app.get('/', (req, res) => {
-  res.render('index', { title: '3D Print Store' });
-});
+// Route delegation
+app.use('/', require('./routes/index'));
 
 const PORT = 3000;
 app.listen(PORT, () => console.log(`Server running at http://localhost:${PORT}`));
