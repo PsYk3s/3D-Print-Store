@@ -1,17 +1,13 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title><%= title %></title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/style.css">
-</head>
+  <%- include('partials/head', { title: '3D Print Store' }) %>
 <body>
   <%- include('partials/header') %>
 
   <%- include('partials/product-grid', { title: 'Latest 3D Prints', products: latest, sectionClass: 'latest' }) %>
   <%- include('partials/product-grid', { title: 'Popular 3D Prints', products: popular, sectionClass: 'popular' }) %>
   <%- include('partials/product-grid', { title: 'Daily Discounts', products: discounts, sectionClass: 'discounts' }) %>
+
+  <%- include('partials/footer') %>
 </body>
 </html>
