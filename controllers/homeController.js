@@ -12,5 +12,3 @@ exports.home = (req, res) => {
     discounts
   });
 };
-
-console.log('Rendering homepage...');

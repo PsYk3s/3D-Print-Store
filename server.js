@@ -11,6 +11,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Route delegation
 app.use('/', require('./routes/index'));
+app.use('/products', require('./routes/productRoutes'));
 
 const PORT = 3000;
 app.listen(PORT, () => console.log(`Server running at http://localhost:${PORT}`));
